@@ -7,3 +7,7 @@ Hardware requirements:
 Build:
 WIFI_FIRMWARE=y WIFI_MODULE=qca DISTRO=fsl-imx-x11 MACHINE=pico-imx7-custom BASEBOARD=pi source tn-setup-release.sh -b build
 bitbake core-image-x11
+
+Videos:
+1. https://youtu.be/fur_CukrPrk
+2. https://youtu.be/5EIdVY-fRlE
