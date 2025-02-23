@@ -1,0 +1,52 @@
+From 117e486559abf1eaa7e1181cd2e3800ecd66bd8d Mon Sep 17 00:00:00 2001
+From: HenryXin <yuepeng.xin@gmail.com>
+Date: Sat, 15 Feb 2025 03:54:00 +0000
+Subject: [PATCH] add imx7d-pico-custom.dts
+
+---
+ arch/arm/boot/dts/nxp/imx/Makefile            |  1 +
+ .../boot/dts/nxp/imx/imx7d-pico-custom.dts    | 20 +++++++++++++++++++
+ 2 files changed, 21 insertions(+)
+ create mode 100644 arch/arm/boot/dts/nxp/imx/imx7d-pico-custom.dts
+
+diff --git a/arch/arm/boot/dts/nxp/imx/Makefile b/arch/arm/boot/dts/nxp/imx/Makefile
+index 9adae153f4dd..24bbf4d0e9f0 100644
+--- a/arch/arm/boot/dts/nxp/imx/Makefile
++++ b/arch/arm/boot/dts/nxp/imx/Makefile
+@@ -479,6 +479,7 @@ dtb-$(CONFIG_SOC_IMX7D) += \
+ 	imx7d-nitrogen7.dtb \
+ 	imx7d-pico-hobbit-qca.dtb \
+ 	imx7d-pico-pi-qca.dtb \
++	imx7d-pico-custom.dtb \
+ 	imx7d-remarkable2.dtb \
+ 	imx7d-sbc-imx7.dtb \
+ 	imx7d-sdb.dtb \
+diff --git a/arch/arm/boot/dts/nxp/imx/imx7d-pico-custom.dts b/arch/arm/boot/dts/nxp/imx/imx7d-pico-custom.dts
+new file mode 100644
+index 000000000000..c44a197f1814
+--- /dev/null
++++ b/arch/arm/boot/dts/nxp/imx/imx7d-pico-custom.dts
+@@ -0,0 +1,20 @@
++/*
++ * Copyright 2018 Technexion Ltd.
++ *
++ * Author: Tapani Utriainen <tapani@technexion.com>
++ *	   Richard Hu <richard.hu@technexion.com>
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License version 2 as
++ * published by the Free Software Foundation.
++ *
++ */
++/dts-v1/;
++
++#include "imx7d.dtsi"
++#include "imx7d-pico-qca.dtsi"
++#include "baseboard_pico_pi.dtsi"
++/ {
++	model = "TechNexion PICO-IMX7D with QCA WLAN module and PI baseboard";
++	compatible = "fsl,pico-imx7d", "fsl,imx7d";
++};
+-- 
+2.44.1
+

@@ -1,0 +1,25 @@
+From f01dbeb281aa829f3e8aea9bc0ae15701780793f Mon Sep 17 00:00:00 2001
+From: HenryXin <yuepeng.xin@gmail.com>
+Date: Sat, 22 Feb 2025 19:27:44 +0000
+Subject: [PATCH] disble the mxc fb
+
+---
+ arch/arm/boot/dts/nxp/imx/imx7d-pico-qca-custom.dtsi | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/arm/boot/dts/nxp/imx/imx7d-pico-qca-custom.dtsi b/arch/arm/boot/dts/nxp/imx/imx7d-pico-qca-custom.dtsi
+index b027807853c6..45bf3b93a703 100644
+--- a/arch/arm/boot/dts/nxp/imx/imx7d-pico-qca-custom.dtsi
++++ b/arch/arm/boot/dts/nxp/imx/imx7d-pico-qca-custom.dtsi
+@@ -233,7 +233,7 @@ mxcfb1: fb@0 {
+ 		default_bpp = <32>;
+ 		int_clk = <0>;
+ 		late_init = <0>;
+-		status = "okay";
++		status = "disabled";
+ 	};
+ };
+ 
+-- 
+2.44.1
+
